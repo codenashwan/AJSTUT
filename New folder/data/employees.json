@@ -1,0 +1,29 @@
+[{
+	"name": "nashwan",
+	"age": 33,
+	"city": "Erbil",
+	"salary": 500,
+	"image": "assets/img/1.svg",
+	"is_active": false
+}, {
+	"name": "sana",
+	"age": 23,
+	"city": "Sulemani",
+	"salary": 600,
+	"image": "assets/img/2.svg",
+	"is_active": true
+}, {
+	"name": "rebwar",
+	"age": 22,
+	"city": "Erbil",
+	"salary": 800,
+	"image": "assets/img/3.svg",
+	"is_active": true
+}, {
+	"name": "karwan",
+	"age": 55,
+	"city": "Duhok",
+	"salary": 900,
+	"image": "assets/img/4.svg",
+	"is_active": true
+}]

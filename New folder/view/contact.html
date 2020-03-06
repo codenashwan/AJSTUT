@@ -1,0 +1,20 @@
+<div class="container">
+<div class="bg-light shadow p-4 ">
+<form novalidate name="form">
+<input type="text" class="form-control form-control-lg m-2" name="name" ng-model="contact.name" placeholder="Name" ng-required="true">
+<span class='text-danger m-2 ' ng-show="form.name.$touched && form.name.$invalid">
+    <center>تکایە ناوێکی گونجاو دابنێ</center>
+</span>
+
+<input type="email" class="form-control form-control-lg m-2" name="email" ng-model="contact.email" placeholder="Email" ng-required="true">
+<span class='text-danger m-2 ' ng-show="form.email.$touched && form.email.$invalid">
+    <center>تکایە ئیمەیلێکی گونجاو  دابنێ</center>
+</span>
+<textarea class="form-control form-control-lg m-2" name="msg" ng-model="contact.messege" placeholder="Messege" ng-required="true"></textarea>
+<span class='text-danger m-2 ' ng-show="form.msg.$touched && form.msg.$invalid">
+    <center>تکایە نامەیەک بنوسە  </center>
+</span>
+<input type="submit" class="btn btn-danger w-100 m-2" ng-disabled="form.$invalid" value="send">
+</form>
+</div>
+</div>

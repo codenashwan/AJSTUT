@@ -1,0 +1,44 @@
+
+    <!-- this is title -->
+    <h1 class="text-center text-danger mt-5 mb-5">Welcome to Employee List</h1>
+  
+  
+  <form class="bg-danger p-5 col-lg-5 m-auto col-sm shadow"  ng-submit="addemployee()">
+  <input type="text" class="form-control m-2" placeholder="Name" ng-model="newemployee.name">
+  <input type="text" class="form-control m-2" placeholder="Age"  ng-model="newemployee.age">
+  <input type="text" class="form-control m-2" placeholder="City"  ng-model="newemployee.city">
+  <input type="text" class="form-control m-2" placeholder="Salaray"  ng-model="newemployee.salary">
+  <button class="btn btn-dark w-100 m-2">Add</button>
+  </form>
+  
+  <div class="m-5"></div>
+  
+  
+    <!-- this is search -->
+    <input type="text" ng-model="search" placeholder="Search For Employee" class="form-control shadow p-4 border-0 col-5 m-auto">
+  
+  
+  
+    <div class="d-flex justify-content-center mt-3">
+      <button class="btn btn-light" ng-click="order = '-age'">Order by Age</button>
+      <button class="btn btn-light" ng-click="order = 'name'">Order by Name</button>
+    </div>
+  
+    <!-- this is card -->
+    <div class="row m-5 justify-content-center">
+  
+  
+      <div class="card p-4 m-2 shadow radius-10 border-0"
+        ng-repeat="employee in employees | orderBy: order | filter: search " ng-show="employee.is_active"
+        style="width: 18rem;">
+        <img src="{{employee.image}}" class="w-50 m-auto">
+        <div class="card-body text-center">
+          <h5 class="card-title text-danger">{{employee.name}}</h5>
+          <p class="card-text">Age : {{employee.age}}</p>
+          <p class="card-text">City : {{employee.city}}</p>
+          <p class="card-text">Salary : {{employee.salary}}</p>
+          <button class="btn btn-danger" ng-click="remove(employee)">Delete</button>
+        </div>
+      </div>
+  
+    </div>
